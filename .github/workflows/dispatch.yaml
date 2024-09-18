@@ -1,7 +1,7 @@
 name: External Events
 on:
   repository_dispatch:
-    type: [build]
+    types: [build]
 jobs:
   echo-a-string:
     runs-on: ubuntu-latest
