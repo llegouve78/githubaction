@@ -8,9 +8,15 @@ jobs:
   env-vars-and-context:
     runs-on: ubuntu-latest
     steps:
-      - name: Log ENV VAR
-        run: echo $GITHUB_REF
-      - name: Log Context
+      - name: Joke
+        run: |
+          echo "RANDOM_JOKE<<EOF" >> "$GITHUB_ENV"
+          curl -s https://icanhadadjoke.com/ >> "$GITHUB_ENV"
+          echo "" >> "$GITHUB_ENV"
+          echo "EOF" >> "$GITHUB_ENV"
+      - name: Joke and Log Context
+      # a comment
         run: |
           echo '${{ github.ref}}'    
           echo ${{ env.WF_LEVEL_ENV}}  
+          echo $RANDOM_JOKE
