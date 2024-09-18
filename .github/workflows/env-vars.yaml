@@ -11,7 +11,7 @@ jobs:
       - name: Joke
         run: |
           echo "RANDOM_JOKE<<EOF" >> "$GITHUB_ENV"
-          curl -s https://icanhadadjoke.com/ >> "$GITHUB_ENV"
+          curl -s https://icanhazdadjoke.com/ >> "$GITHUB_ENV"
           echo "" >> "$GITHUB_ENV"
           echo "EOF" >> "$GITHUB_ENV"
       - name: Joke and Log Context
