@@ -1,6 +1,9 @@
 name: environement variables
 on: [push]
 
+env:
+  WF_LEVEL_ENV: Available to all jobs  
+
 jobs:
   env-vars-and-context:
     runs-on: ubuntu-latest
@@ -8,4 +11,6 @@ jobs:
       - name: Log ENV VAR
         run: echo $GITHUB_REF
       - name: Log Context
-        run: echo '${{ github.ref}}'      
+        run: |
+          echo '${{ github.ref}}'    
+          echo ${{ env.WF_LEVEL_ENV}}  
