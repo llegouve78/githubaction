@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   env-vars-and-context:
-    runs-on: ubunutu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Log ENV VAR
         run: echo $GITHUB_REF
