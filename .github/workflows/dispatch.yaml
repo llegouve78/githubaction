@@ -2,6 +2,7 @@ name: External Events
 on:
   repository_dispatch:
     types: [build]
+run-name: "Start by @${{github.actor}}"
 jobs:
   echo-a-string:
     runs-on: ubuntu-latest
