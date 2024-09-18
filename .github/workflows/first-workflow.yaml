@@ -1,13 +1,17 @@
-name: First Workflow
+name: Second Workflow
 on: [push]
 
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
-        run: echo "Hello World"
-      - name: Multiline Command
+      - name: List files before
+        run: ls -a
+      - name: Checkout
         run: |
-          node -v
-          npm -v
+          git init
+          git remote add origin "https://$GITHIB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+          git fetch origin
+          git checkout main
+      - name: List files after
+        run: ls -a
