@@ -1,0 +1,16 @@
+{
+  "name": "githubaction",
+  "version": "1.0.0",
+  "description": "[![Board Status](https://dev.azure.com/louisle-gouvello/b56e7801-68ee-4b55-958d-9c532ab84fae/20ea15bc-925c-4d9b-8758-e6ef1a5fccb5/_apis/work/boardbadge/42faacfe-170c-43d7-b4d7-b574fe9d363d)](https://dev.azure.com/louisle-gouvello/b56e7801-68ee-4b55-958d-9c532ab84fae/_boards/board/t/20ea15bc-925c-4d9b-8758-e6ef1a5fccb5/Microsoft.RequirementCategory) ��#\u0000 \u0000g\u0000i\u0000t\u0000h\u0000u\u0000b\u0000a\u0000c\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  }
+}
