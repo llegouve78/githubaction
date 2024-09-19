@@ -1,0 +1,17 @@
+name: Concurrency 1
+run-name: Concurrency 1 (${{ inputs.environment}})
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment"
+        type: environment
+        required: true
+        
+jobs:
+  sleep:
+    runs-on: ubuntu-latest
+    steps:
+       - run: |
+           sleep 10
+           echo ${{ github.event.inputs.environment}} 
