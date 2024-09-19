@@ -21,6 +21,6 @@ jobs:
         with:
           script: |
             const axios = require('axios')
-            const res = await axios('https://icanhazdadjike.com/', { headers: {
+            const res = await axios('https://icanhazdadjoke.com/', { headers: {
             Accept: 'text/plain' }})
             console.log(res.data)
