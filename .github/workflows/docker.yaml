@@ -1,5 +1,6 @@
-name: Dcoker
+name: Docker
 on: [workflow_dispatch]
+
 jobs:
   docker-job:
     runs-on: ubuntu-latest
@@ -18,4 +19,4 @@ jobs:
         with:
           entrypoint: ./script.sh
           args: "Some args"
-            
+
